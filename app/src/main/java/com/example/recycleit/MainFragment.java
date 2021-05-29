@@ -8,6 +8,7 @@ import androidx.fragment.app.Fragment;
 
 import android.view.LayoutInflater;
 import android.view.View;
+
 import android.view.ViewGroup;
 
 import com.google.android.gms.common.GooglePlayServicesRepairableException;
@@ -31,9 +32,9 @@ public class MainFragment extends Fragment implements OnMapReadyCallback {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         return inflater.inflate(R.layout.fragment_main, container, false);
+
     }
-
-
+//Mapa
     GoogleMap map;
     MapView miMapa;
     @Override
