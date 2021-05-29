@@ -3,4 +3,13 @@
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="perfil">Perfil</string>
+    <string name="btnAtras">Atras</string>
+    <string name="imgperfil">imgPerfil</string>
+    <string name="txtSaludo">Bienvenido:</string>
+    <string name="txtTitulo">Perfil</string>
+    <string name="txtNombre">Nombre:</string>
+    <string name="txtEdad">Edad:</string>
+    <string name="txtContacto">Numero Telefonico:</string>
+    <string name="txtCorreo">Correo:</string>
+    <string name="txtUbicacion">Ubicación:</string>
 </resources>
