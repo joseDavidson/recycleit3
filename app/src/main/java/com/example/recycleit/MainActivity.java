@@ -87,13 +87,13 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     }
    public void reciclaje(View v){
-        Toast.makeText(this, "hola", Toast.LENGTH_SHORT).show();
+        Toast.makeText(this, "Reciclaje", Toast.LENGTH_SHORT).show();
         BtnReciclaje();
     }
 
     @Override
     public void onClick(View v) {
-        Toast.makeText(this, "hola", Toast.LENGTH_SHORT).show();
+        Toast.makeText(this, "Reciclaje", Toast.LENGTH_SHORT).show();
         BtnReciclaje();
     }
 }
