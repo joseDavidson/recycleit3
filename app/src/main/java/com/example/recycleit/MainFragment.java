@@ -49,9 +49,16 @@ public class MainFragment extends Fragment implements OnMapReadyCallback {
     public void onMapReady(GoogleMap googleMap) {
         MapsInitializer.initialize(getContext());
         map = googleMap;
-        //Puntos de Reciclaje.
-
         LatLng restaurantSoju = new LatLng(-33.4381297,-70.6487444);
+        map.addMarker(new MarkerOptions().position(restaurantSoju).title("Restaurant Soju Vegano Vegetariano").snippet("Dirección: Merced 821, 17, Santiago, Región Metropolitana").icon(BitmapDescriptorFactory.fromResource(R.drawable.puntoreciclajeextraextrachico)));
+        LatLng reciclajeReyes = new LatLng(-33.428412526129215,-70.66830728225443);
+        map.addMarker(new MarkerOptions().position(reciclajeReyes).title("Punto Limpio Parque de Los Reyes").snippet("Dirección: Santiago, Región Metropolitana").icon(BitmapDescriptorFactory.fromResource(R.drawable.puntoreciclajeextraextrachico)));
+        LatLng reciclajeCerrillos = new LatLng(-33.5051505,-70.728599);
+        map.addMarker(new MarkerOptions().position(reciclajeCerrillos).title("Punto Limpio TriCiclos - Sodimac Cerrillos").snippet("Dirección: Avenida Américo Vespucio 1501, Cerrillos Estacionamiento Homecenter Sodimac Mall Plaza Oeste, Santiago, Región Metropolitana").icon(BitmapDescriptorFactory.fromResource(R.drawable.puntoreciclajeextraextrachico)));
+        LatLng reciclajeElBosque = new LatLng(-33.5623518,-70.6768486);
+        map.addMarker(new MarkerOptions().position(reciclajeElBosque).title("Punto Limpio TriCiclos - Sodimac El Bosque").snippet("Dirección: Av José Miguel Carrera 10375, El Bosque Estacionamiento Homecenter Sodimac Open Plaza, El Bosque, Santiago, Región Metropolitana").icon(BitmapDescriptorFactory.fromResource(R.drawable.puntoreciclajeextraextrachico)));
+        LatLng reciclajeSanJoaquin = new LatLng(-33.5,-70.61667);
+        map.addMarker(new MarkerOptions().position(reciclajeSanJoaquin).title("Punto de reciclaje").snippet("Dirección: Uno de Septiembre 308, San Joaquín, Región Metropolitana").icon(BitmapDescriptorFactory.fromResource(R.drawable.puntoreciclajeextraextrachico)));
         //Centrar Mapa
         map.moveCamera(CameraUpdateFactory.newLatLngZoom(restaurantSoju, 11));
     }
