@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentTransaction;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -12,37 +13,44 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.Toast;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends AppCompatActivity implements View.OnClickListener {
     FragmentTransaction transaction;
     Fragment mainFragment;
     private AlertDialog.Builder dialogBuilder;
     private AlertDialog dialog;
-    private Button btnAtras;
+    private Button btnAtras,btnAtrasR;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         mainFragment = new MainFragment();
-        getSupportFragmentManager().beginTransaction().add(R.id.Contenedor,mainFragment).commit();
+        getSupportFragmentManager().beginTransaction().add(R.id.Contenedor, mainFragment).commit();
     }
-    public boolean onCreateOptionsMenu(Menu menu){
+
+    public boolean onCreateOptionsMenu(Menu menu) {
         getMenuInflater().inflate(R.menu.overflow, menu);
         return true;
     }
+
     public boolean onOptionsItemSelected(MenuItem item) {
         int id = item.getItemId();
         if (id == R.id.item1) {
             Toast.makeText(this, "Perfil", Toast.LENGTH_SHORT).show();
-            createNewContacDialog();
-
-        }
+            Perfil();
+        }/**Esta Parte del codigo es conflictiva.
+         else if(id == R.id.item2){
+         Toast.makeText(this, "Mapa", Toast.LENGTH_SHORT).show();
+         Mapa();
+         }**/
         return super.onOptionsItemSelected(item);
 
     }
+
     //Popup Menu
-    public void createNewContacDialog(){
+    public void Perfil() {
         dialogBuilder = new AlertDialog.Builder(this);
-        final View contactPopupView = getLayoutInflater().inflate(R.layout.popupperfil,null);
+        final View contactPopupView = getLayoutInflater().inflate(R.layout.popupperfil, null);
         //Codigo layout popup
         btnAtras = (Button) contactPopupView.findViewById(R.id.btnAtras);
         //Codigo layout popup
@@ -58,4 +66,46 @@ public class MainActivity extends AppCompatActivity {
         });
 
     }
+
+    //Popup Reciclar
+    public void BtnReciclaje() {
+        dialogBuilder = new AlertDialog.Builder(this);
+        final View contactPopupView = getLayoutInflater().inflate(R.layout.popupreciclaje, null);
+        //Codigo layout popup
+        btnAtrasR = (Button) contactPopupView.findViewById(R.id.bntAtrasR);
+        //Codigo layout popup
+        dialogBuilder.setView(contactPopupView);
+        dialog = dialogBuilder.create();
+        dialog.show();
+        //botones
+        btnAtrasR.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                dialog.dismiss();
+            }
+        });
+
+    }
+   public void reciclaje(View v){
+        Toast.makeText(this, "hola", Toast.LENGTH_SHORT).show();
+        BtnReciclaje();
+    }
+
+    @Override
+    public void onClick(View v) {
+        Toast.makeText(this, "hola", Toast.LENGTH_SHORT).show();
+        BtnReciclaje();
+    }
 }
+
+
+
+
+
+
+    /**Menu Mapa
+    public void Mapa(){
+        Intent contacto = new Intent(this,MainActivity.class);
+        startActivity(contacto);
+    }**/
+

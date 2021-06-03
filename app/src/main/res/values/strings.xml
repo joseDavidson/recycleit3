@@ -12,4 +12,6 @@
     <string name="txtContacto">Numero Telefonico:</string>
     <string name="txtCorreo">Correo:</string>
     <string name="txtUbicacion">Ubicación:</string>
+    <string name="item2Mapa">Mapa</string>
+    <string name="todo">TODO</string>
 </resources>
