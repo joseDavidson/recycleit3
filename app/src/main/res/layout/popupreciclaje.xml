@@ -3,16 +3,96 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+    <Button
+        android:onClick="reciclajeSiguiente"
+        android:id="@+id/btnReciclajeS"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="216dp"
+        android:layout_marginLeft="216dp"
+        android:layout_marginTop="584dp"
+        android:gravity="center"
+        android:text="@string/btnSiguiente"
+        app:backgroundTint="#2E7D32"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <CheckBox
+        android:id="@+id/checkBoxAceite"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="216dp"
+        android:layout_marginLeft="216dp"
+        android:layout_marginTop="220dp"
+        android:drawableBottom="@drawable/ecoicon2_122074"
+        android:gravity="center"
+        android:text="@string/aceite"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <CheckBox
+        android:id="@+id/checkBoxCarton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginLeft="24dp"
+        android:layout_marginTop="220dp"
+        android:drawableBottom="@drawable/ecoicon16_122083"
+        android:gravity="center"
+        android:text="@string/carton"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <CheckBox
+        android:id="@+id/checkBoxOtros"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginLeft="24dp"
+        android:layout_marginTop="364dp"
+        android:drawableBottom="@drawable/ea_122070"
+        android:gravity="center"
+        android:text="@string/otros"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <CheckBox
+        android:id="@+id/checkBoxElectro"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="216dp"
+        android:layout_marginLeft="216dp"
+        android:layout_marginTop="364dp"
+        android:drawableBottom="@drawable/d_122068"
+        android:gravity="center"
+        android:text="@string/electr_nica"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <CheckBox
+        android:id="@+id/checkBoxPlasticos"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="216dp"
+        android:layout_marginLeft="216dp"
+        android:layout_marginTop="76dp"
+        android:drawableBottom="@drawable/ecoicon1_122072"
+        android:gravity="center"
+        android:text="@string/plasticos"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:gravity="center"
         android:id="@+id/txtTituloPopUp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="116dp"
-        android:layout_marginLeft="116dp"
-        android:layout_marginTop="36dp"
+        android:layout_marginStart="96dp"
+        android:layout_marginLeft="96dp"
+        android:layout_marginTop="20dp"
+        android:gravity="center"
         android:text="@string/que_deseas_reciclar"
         android:textColor="#040404"
         android:textSize="20sp"
@@ -21,105 +101,27 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <CheckBox
-        android:gravity="center"
-        android:id="@+id/checkBoxElectro"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="236dp"
-        android:layout_marginLeft="236dp"
-        android:layout_marginTop="380dp"
-        android:drawableBottom="@drawable/d_122068"
-        android:text="@string/electr_nica"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <CheckBox
-        android:gravity="center"
-        android:id="@+id/checkBoxCarton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="44dp"
-        android:layout_marginLeft="44dp"
-        android:layout_marginTop="236dp"
-        android:drawableBottom="@drawable/ecoicon16_122083"
-        android:text="@string/carton"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <CheckBox
-        android:gravity="center"
-        android:id="@+id/checkBoxPlasticos"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="236dp"
-        android:layout_marginLeft="236dp"
-        android:layout_marginTop="92dp"
-        android:drawableBottom="@drawable/ecoicon1_122072"
-        android:text="@string/plasticos"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <CheckBox
-        android:gravity="center"
         android:id="@+id/checkBoxVidrio"
         style="@style/Widget.AppCompat.CompoundButton.CheckBox"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="40dp"
-        android:layout_marginLeft="40dp"
-        android:layout_marginTop="92dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="76dp"
         android:drawableBottom="@drawable/ecoicon18_122084"
+        android:gravity="center"
         android:text="@string/vidrio"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <CheckBox
-        android:gravity="center"
-        android:id="@+id/checkBoxAceite"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="236dp"
-        android:layout_marginLeft="236dp"
-        android:layout_marginTop="236dp"
-        android:drawableBottom="@drawable/ecoicon2_122074"
-        android:text="@string/aceite"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <CheckBox
-        android:gravity="center"
-        android:id="@+id/checkBoxOtros"
+    <Button
+        android:id="@+id/btnAtrasR"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="44dp"
         android:layout_marginLeft="44dp"
-        android:layout_marginTop="380dp"
-        android:drawableBottom="@drawable/ea_122070"
-        android:text="@string/otros"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <Button
+        android:layout_marginTop="584dp"
         android:gravity="center"
-        android:id="@+id/bntAceptar"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="236dp"
-        android:layout_marginLeft="236dp"
-        android:layout_marginTop="600dp"
-        android:text="@string/btnSiguiente"
-        app:backgroundTint="#2E7D32"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <Button
-        android:gravity="center"
-        android:id="@+id/btnAtrasR"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="64dp"
-        android:layout_marginLeft="64dp"
-        android:layout_marginTop="600dp"
         android:text="@string/atras"
         app:backgroundTint="#0277BD"
         app:layout_constraintStart_toStartOf="parent"
