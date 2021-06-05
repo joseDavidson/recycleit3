@@ -6,25 +6,122 @@
     android:layout_height="match_parent">
 
     <TextView
-        android:id="@+id/textView"
+        android:gravity="center"
+        android:id="@+id/txtTituloPopUp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="136dp"
-        android:layout_marginLeft="136dp"
-        android:layout_marginTop="263dp"
-        android:text="Funciona"
+        android:layout_marginStart="116dp"
+        android:layout_marginLeft="116dp"
+        android:layout_marginTop="36dp"
+        android:text="@string/que_deseas_reciclar"
+        android:textColor="#040404"
+        android:textSize="20sp"
+        android:textStyle="italic"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <CheckBox
+        android:gravity="center"
+        android:id="@+id/checkBoxElectro"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="236dp"
+        android:layout_marginLeft="236dp"
+        android:layout_marginTop="380dp"
+        android:drawableBottom="@drawable/d_122068"
+        android:text="@string/electr_nica"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <CheckBox
+        android:gravity="center"
+        android:id="@+id/checkBoxCarton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="44dp"
+        android:layout_marginLeft="44dp"
+        android:layout_marginTop="236dp"
+        android:drawableBottom="@drawable/ecoicon16_122083"
+        android:text="@string/carton"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <CheckBox
+        android:gravity="center"
+        android:id="@+id/checkBoxPlasticos"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="236dp"
+        android:layout_marginLeft="236dp"
+        android:layout_marginTop="92dp"
+        android:drawableBottom="@drawable/ecoicon1_122072"
+        android:text="@string/plasticos"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <CheckBox
+        android:gravity="center"
+        android:id="@+id/checkBoxVidrio"
+        style="@style/Widget.AppCompat.CompoundButton.CheckBox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="40dp"
+        android:layout_marginLeft="40dp"
+        android:layout_marginTop="92dp"
+        android:drawableBottom="@drawable/ecoicon18_122084"
+        android:text="@string/vidrio"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <CheckBox
+        android:gravity="center"
+        android:id="@+id/checkBoxAceite"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="236dp"
+        android:layout_marginLeft="236dp"
+        android:layout_marginTop="236dp"
+        android:drawableBottom="@drawable/ecoicon2_122074"
+        android:text="@string/aceite"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <CheckBox
+        android:gravity="center"
+        android:id="@+id/checkBoxOtros"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="44dp"
+        android:layout_marginLeft="44dp"
+        android:layout_marginTop="380dp"
+        android:drawableBottom="@drawable/ea_122070"
+        android:text="@string/otros"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
-        android:onClick="btnAtras"
-        android:id="@+id/bntAtrasR"
+        android:gravity="center"
+        android:id="@+id/bntAceptar"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="496dp"
-        android:layout_marginEnd="148dp"
-        android:layout_marginRight="148dp"
-        android:text="@string/btnAtras"
-        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginStart="236dp"
+        android:layout_marginLeft="236dp"
+        android:layout_marginTop="600dp"
+        android:text="@string/btnSiguiente"
+        app:backgroundTint="#2E7D32"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:gravity="center"
+        android:id="@+id/btnAtrasR"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="64dp"
+        android:layout_marginLeft="64dp"
+        android:layout_marginTop="600dp"
+        android:text="@string/atras"
+        app:backgroundTint="#0277BD"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 </androidx.constraintlayout.widget.ConstraintLayout>

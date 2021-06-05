@@ -18,7 +18,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     Fragment mainFragment;
     private AlertDialog.Builder dialogBuilder;
     private AlertDialog dialog;
-    private Button btnAtras,btnAtrasR;
+    private Button btnAtras,btnAtrasReciclaje;
     //Commit con boton flotante cambiado UwU
 
     @Override
@@ -73,13 +73,13 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         dialogBuilder = new AlertDialog.Builder(this);
         final View contactPopupView = getLayoutInflater().inflate(R.layout.popupreciclaje, null);
         //Codigo layout popup
-        btnAtrasR = (Button) contactPopupView.findViewById(R.id.bntAtrasR);
+        btnAtrasReciclaje = (Button) contactPopupView.findViewById(R.id.btnAtrasR);
         //Codigo layout popup
         dialogBuilder.setView(contactPopupView);
         dialog = dialogBuilder.create();
         dialog.show();
         //botones
-        btnAtrasR.setOnClickListener(new View.OnClickListener() {
+        btnAtrasReciclaje.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 dialog.dismiss();
