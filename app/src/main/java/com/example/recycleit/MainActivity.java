@@ -2,6 +2,7 @@ package com.example.recycleit;
 
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.app.ServiceCompat;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentTransaction;
 
@@ -18,7 +19,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     Fragment mainFragment;
     private AlertDialog.Builder dialogBuilder;
     private AlertDialog dialog;
-    private Button btnAtras,btnAtrasR;
+    private Button btnAtras,btnAtrasReciclaje,btnReciclajeTipo;
     //Commit con boton flotante cambiado UwU
 
     @Override
@@ -73,18 +74,37 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         dialogBuilder = new AlertDialog.Builder(this);
         final View contactPopupView = getLayoutInflater().inflate(R.layout.popupreciclaje, null);
         //Codigo layout popup
-        btnAtrasR = (Button) contactPopupView.findViewById(R.id.bntAtrasR);
+        btnAtrasReciclaje = (Button) contactPopupView.findViewById(R.id.btnAtrasR);
         //Codigo layout popup
         dialogBuilder.setView(contactPopupView);
         dialog = dialogBuilder.create();
         dialog.show();
         //botones
-        btnAtrasR.setOnClickListener(new View.OnClickListener() {
+        btnAtrasReciclaje.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 dialog.dismiss();
             }
         });
+
+    }
+    public void BtnReciclajeTipo() {
+        dialogBuilder = new AlertDialog.Builder(this);
+        final View contactPopupView = getLayoutInflater().inflate(R.layout.popupreciclajeforma, null);
+        //Codigo layout popup
+        btnReciclajeTipo= (Button) contactPopupView.findViewById(R.id.btnAceptarPopUp2);
+        //Codigo layout popup
+        dialogBuilder.setView(contactPopupView);
+        dialog = dialogBuilder.create();
+        dialog.show();
+        //botones
+        btnReciclajeTipo.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                dialog.dismiss();
+            }
+        });
+
 
     }
    public void reciclaje(View v){
@@ -96,6 +116,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     public void onClick(View v) {
         Toast.makeText(this, "Reciclaje", Toast.LENGTH_SHORT).show();
         BtnReciclaje();
+    }
+    public void reciclajeSiguiente(View v){
+        Toast.makeText(this, "Forma de reciclar", Toast.LENGTH_SHORT).show();
+        BtnReciclajeTipo();
     }
 }
 

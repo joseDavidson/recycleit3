@@ -10,7 +10,8 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.RecycleIT">
         <meta-data android:name="com.google.android.geo.API_KEY" android:value="AIzaSyBYSi9EPaGSzFx5qmRzzjT0heVgPDgZ5o8"></meta-data>
-        <activity android:name=".MainActivity">
+        <activity android:name=".MainActivity"
+            android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
