@@ -20,6 +20,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     private AlertDialog.Builder dialogBuilder;
     private AlertDialog dialog;
     private Button btnAtras,btnAtrasReciclaje,btnReciclajeTipo;
+
     //Commit con boton flotante cambiado UwU
 
     @Override
