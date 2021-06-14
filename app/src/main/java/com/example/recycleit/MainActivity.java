@@ -43,11 +43,14 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         if (id == R.id.item1) {
             Toast.makeText(this, "Perfil", Toast.LENGTH_SHORT).show();
             Perfil();
-        }/**Esta Parte del codigo es conflictiva.
-         else if(id == R.id.item2){
-         Toast.makeText(this, "Mapa", Toast.LENGTH_SHORT).show();
-         Mapa();
-         }**/
+        }
+        if (id == R.id.item2) {
+            Toast.makeText(this, "solicitar nuevo punto", Toast.LENGTH_SHORT).show();
+        }
+        if (id == R.id.item3) {
+            Toast.makeText(this, "denunciar punto", Toast.LENGTH_SHORT).show();
+        }
+
         return super.onOptionsItemSelected(item);
 
     }

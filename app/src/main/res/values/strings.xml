@@ -46,4 +46,6 @@
     <string name="etxtubicacion">Ubicación:</string>
     <string name="etxtpassword">Password:</string>
     <string name="btnAddUser">Enviar</string>
+    <string name="solicitar_nuevo_punto">Solicitar nuevo punto</string>
+    <string name="denunciar_punto">Denunciar punto</string>
 </resources>
