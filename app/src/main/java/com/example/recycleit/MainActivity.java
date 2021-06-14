@@ -2,16 +2,16 @@ package com.example.recycleit;
 
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.core.app.ServiceCompat;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentTransaction;
 
-import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageButton;
+import android.widget.RadioButton;
 import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
@@ -19,9 +19,11 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     Fragment mainFragment;
     private AlertDialog.Builder dialogBuilder;
     private AlertDialog dialog;
-    private Button btnAtras,btnAtrasReciclaje,btnReciclajeTipo;
+    private Button btnIniciarSesion,btnAtrasReciclaje,btnReciclajeTipo,btnAdelanteReciclaje,btnEntrarSesion,btnRegistrarse,btnEntrarInvitado;
+    private ImageButton btnPorPunto,btnPorRecolector;
 
-    //Commit con boton flotante cambiado UwU
+
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -55,16 +57,17 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         dialogBuilder = new AlertDialog.Builder(this);
         final View contactPopupView = getLayoutInflater().inflate(R.layout.popupperfil, null);
         //Codigo layout popup
-        btnAtras = (Button) contactPopupView.findViewById(R.id.btnAtras);
+        btnIniciarSesion = (Button) contactPopupView.findViewById(R.id.btnIniciarSesion);
         //Codigo layout popup
         dialogBuilder.setView(contactPopupView);
         dialog = dialogBuilder.create();
         dialog.show();
         //botones
-        btnAtras.setOnClickListener(new View.OnClickListener() {
+        btnIniciarSesion.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 dialog.dismiss();
+                lanzarVistaInicioSesion();
             }
         });
 
@@ -76,6 +79,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         final View contactPopupView = getLayoutInflater().inflate(R.layout.popupreciclaje, null);
         //Codigo layout popup
         btnAtrasReciclaje = (Button) contactPopupView.findViewById(R.id.btnAtrasR);
+        btnAdelanteReciclaje = (Button) contactPopupView.findViewById(R.id.btnReciclajeS);
         //Codigo layout popup
         dialogBuilder.setView(contactPopupView);
         dialog = dialogBuilder.create();
@@ -87,27 +91,86 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 dialog.dismiss();
             }
         });
+        btnAdelanteReciclaje.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                dialog.dismiss();
+                BtnReciclajeTipo();
+            }
+        });
 
     }
     public void BtnReciclajeTipo() {
         dialogBuilder = new AlertDialog.Builder(this);
         final View contactPopupView = getLayoutInflater().inflate(R.layout.popupreciclajeforma, null);
         //Codigo layout popup
-        btnReciclajeTipo= (Button) contactPopupView.findViewById(R.id.btnAceptarPopUp2);
+        btnPorPunto= (ImageButton) contactPopupView.findViewById(R.id.btnReciclajePorPunto);
+        btnPorRecolector= (ImageButton) contactPopupView.findViewById(R.id.btnReciclajePorRecolector);
         //Codigo layout popup
         dialogBuilder.setView(contactPopupView);
         dialog = dialogBuilder.create();
         dialog.show();
         //botones
-        btnReciclajeTipo.setOnClickListener(new View.OnClickListener() {
+        btnPorPunto.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 dialog.dismiss();
             }
         });
+        btnPorRecolector.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                dialog.dismiss();
+                lanzarVistaRecolectores();
+            }
+        });
 
 
     }
+    public void lanzarVistaRecolectores() {
+        dialogBuilder = new AlertDialog.Builder(this);
+        final View contactPopupView = getLayoutInflater().inflate(R.layout.listarecolectores, null);
+        //Codigo layout popup
+;
+        //Codigo layout popup
+        dialogBuilder.setView(contactPopupView);
+        dialog = dialogBuilder.create();
+        dialog.show();
+    }
+    public void lanzarVistaInicioSesion() {
+        dialogBuilder = new AlertDialog.Builder(this);
+        final View contactPopupView = getLayoutInflater().inflate(R.layout.iniciarsesion, null);
+        //Codigo layout popup
+        btnEntrarSesion=(Button)contactPopupView.findViewById(R.id.ISbtnEntrar);
+        btnRegistrarse=(Button)contactPopupView.findViewById(R.id.ISbtnRegistrarse);
+        btnEntrarInvitado=(Button)contactPopupView.findViewById(R.id.ISbtnEntrarComoInvitado);
+
+        //Codigo layout popup
+        dialogBuilder.setView(contactPopupView);
+        dialog = dialogBuilder.create();
+        dialog.show();
+
+        btnEntrarSesion.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                dialog.dismiss();
+            }
+        });
+        btnRegistrarse.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                dialog.dismiss();
+                //Lanzar layout de registro
+            }
+        });
+        btnEntrarInvitado.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                dialog.dismiss();
+            }
+        });
+    }
+
    public void reciclaje(View v){
         Toast.makeText(this, "Reciclaje", Toast.LENGTH_SHORT).show();
         BtnReciclaje();
@@ -122,6 +185,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         Toast.makeText(this, "Forma de reciclar", Toast.LENGTH_SHORT).show();
         BtnReciclajeTipo();
     }
+
 }
 
 

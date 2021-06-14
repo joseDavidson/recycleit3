@@ -18,6 +18,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 
 import android.view.ViewGroup;
+import android.widget.Toast;
 
 import com.google.android.gms.common.GooglePlayServicesRepairableException;
 import com.google.android.gms.maps.CameraUpdateFactory;
@@ -75,7 +76,7 @@ public class MainFragment extends Fragment implements OnMapReadyCallback {
 
 
         LatLng restaurantSoju = new LatLng(-33.4381297,-70.6487444);
-        map.addMarker(new MarkerOptions().position(restaurantSoju).title("Restaurant Soju Vegano Vegetariano").snippet("Dirección: Merced 821, 17, Santiago, Región Metropolitana").icon(BitmapDescriptorFactory.fromResource(R.drawable.puntoreciclajeextraextrachico)));
+        map.addMarker(new MarkerOptions().position(restaurantSoju).title("Centro de reciclaje Plaza de Armas Merced 821 Santiagoaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa").snippet("plástico-carton-vidrio-aluminio").icon(BitmapDescriptorFactory.fromResource(R.drawable.puntoreciclajeextraextrachico)));
         LatLng reciclajeReyes = new LatLng(-33.428412526129215,-70.66830728225443);
         map.addMarker(new MarkerOptions().position(reciclajeReyes).title("Punto Limpio Parque de Los Reyes").snippet("Dirección: Santiago, Región Metropolitana").icon(BitmapDescriptorFactory.fromResource(R.drawable.puntoreciclajeextraextrachico)));
         LatLng reciclajeCerrillos = new LatLng(-33.5051505,-70.728599);
@@ -85,7 +86,6 @@ public class MainFragment extends Fragment implements OnMapReadyCallback {
         LatLng reciclajeSanJoaquin = new LatLng(-33.5,-70.61667);
         map.addMarker(new MarkerOptions().position(reciclajeSanJoaquin).title("Punto de reciclaje").snippet("Dirección: Uno de Septiembre 308, San Joaquín, Región Metropolitana").icon(BitmapDescriptorFactory.fromResource(R.drawable.puntoreciclajeextraextrachico)));
         //Centrar Mapa
-
         //map.moveCamera(CameraUpdateFactory.newLatLngZoom(restaurantSoju, 11));
         if (ActivityCompat.checkSelfPermission(getActivity(), Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED && ActivityCompat.checkSelfPermission(getActivity(), Manifest.permission.ACCESS_COARSE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
             // TODO: Consider calling
