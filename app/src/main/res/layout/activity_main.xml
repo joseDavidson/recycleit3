@@ -10,8 +10,8 @@
     <androidx.fragment.app.FragmentContainerView
         android:id="@+id/Contenedor"
         android:name="com.example.recycleit.MainFragment"
-        android:layout_width="324dp"
-        android:layout_height="472dp"
+        android:layout_width="411dp"
+        android:layout_height="733dp"
         android:layout_marginStart="4dp"
         android:layout_marginLeft="4dp"
         app:layout_constraintBottom_toBottomOf="parent"
