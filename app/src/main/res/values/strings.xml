@@ -53,4 +53,8 @@
     <string name="rVidrio">Reciclaje Vidrio.</string>
     <string name="rPlastico">Reciclaje Plastico.</string>
     <string name="rCarton">Reciclaje Cartón</string>
+    <string name="etxtDireccion">Dirección.</string>
+    <string name="etxtNombrePunto">Nombre del punto.</string>
+    <string name="txtDenunciarPunto">Denuciar Punto</string>
+    <string name="DejaTuMensaje">Deja tu mensaje.</string>
 </resources>

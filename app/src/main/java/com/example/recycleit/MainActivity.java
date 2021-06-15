@@ -21,7 +21,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     Fragment mainFragment;
     private AlertDialog.Builder dialogBuilder;
     private AlertDialog dialog;
-    private Button btnIniciarSesion,btnAtrasReciclaje,btnNewSoli,btnAdelanteReciclaje,btnEntrarSesion,btnRegistrarse,btnEntrarInvitado;
+    private Button btnIniciarSesion,btnAtrasReciclaje,
+            btnNewSoli,btnAdelanteReciclaje,btnEntrarSesion,
+            btnRegistrarse,btnEntrarInvitado,btnDenunciarPunto;
     private ImageButton btnPorPunto,btnPorRecolector;
 
 
@@ -52,6 +54,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         }
         if (id == R.id.item3) {
             Toast.makeText(this, "denunciar punto", Toast.LENGTH_SHORT).show();
+            denunciarPunto();
         }
 
         return super.onOptionsItemSelected(item);
@@ -95,6 +98,25 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 msn("Solicitud Enviada :)");
             }
 
+        });
+
+    }
+    public void denunciarPunto() {
+        dialogBuilder = new AlertDialog.Builder(this);
+        final View contactPopupView = getLayoutInflater().inflate(R.layout.denunciarpunto, null);
+        //Codigo layout popup
+        btnDenunciarPunto = (Button) contactPopupView.findViewById(R.id.btnAceptarDenunciarPunto);
+        //Codigo layout popup
+        dialogBuilder.setView(contactPopupView);
+        dialog = dialogBuilder.create();
+        dialog.show();
+        //botones
+        btnDenunciarPunto.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                dialog.dismiss();
+                msn("Punto Denunciado.");
+            }
         });
 
     }
