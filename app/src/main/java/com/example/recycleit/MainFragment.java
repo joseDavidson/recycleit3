@@ -108,7 +108,7 @@ public class MainFragment extends Fragment implements OnMapReadyCallback {
             @Override
             public void onLocationChanged(Location location) {
                 LatLng miUbicacion = new LatLng(location.getLatitude(), location.getLongitude());
-                map.addMarker(new MarkerOptions().position(miUbicacion).title("ubicacion actual"));
+
                 //map.addMarker(new MarkerOptions().position(miUbicacion).title("ubicacion actual"));
                 //map.moveCamera(CameraUpdateFactory.newLatLngZoom(reciclajeReyes, 11));
 
