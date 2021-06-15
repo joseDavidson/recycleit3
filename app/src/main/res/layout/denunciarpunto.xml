@@ -3,8 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:background="?android:attr/colorBackgroundCacheHint">
+    android:layout_height="match_parent">
 
     <TextView
         android:id="@+id/txtTituloDenuncia"
@@ -22,7 +21,7 @@
         android:id="@+id/editTextTextPersonName3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="50dp"
         android:ems="10"
         android:hint="@string/etxtDireccion"
         android:inputType="textPersonName"
@@ -35,11 +34,10 @@
         android:id="@+id/etxtdireccion"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="104dp"
         android:ems="10"
         android:hint="@string/etxtNombrePunto"
         android:inputType="textPersonName"
-        android:textAllCaps="false"
         app:layout_constraintEnd_toEndOf="@+id/txtTituloDenuncia"
         app:layout_constraintHorizontal_bias="0.525"
         app:layout_constraintStart_toStartOf="@+id/txtTituloDenuncia"
@@ -47,14 +45,12 @@
 
     <EditText
         android:id="@+id/editTextTextPersonName4"
-        android:layout_width="202dp"
-        android:layout_height="101dp"
-        android:layout_marginTop="20dp"
+        android:layout_width="217dp"
+        android:layout_height="75dp"
+        android:layout_marginTop="52dp"
         android:ems="10"
         android:hint="@string/DejaTuMensaje"
-        android:inputType="textMultiLine"
-        android:lines="6"
-        android:maxLines="6"
+        android:inputType="textPersonName"
         app:layout_constraintEnd_toEndOf="@+id/editTextTextPersonName3"
         app:layout_constraintHorizontal_bias="0.428"
         app:layout_constraintStart_toStartOf="@+id/editTextTextPersonName3"
@@ -64,13 +60,12 @@
         android:id="@+id/btnAceptarDenunciarPunto"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
-        android:layout_marginBottom="20dp"
+        android:layout_marginTop="116dp"
+        android:layout_marginBottom="100dp"
         android:text="@string/btnAceptar"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="@+id/editTextTextPersonName4"
         app:layout_constraintHorizontal_bias="0.496"
         app:layout_constraintStart_toStartOf="@+id/editTextTextPersonName4"
         app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName4" />
-
 </androidx.constraintlayout.widget.ConstraintLayout>
