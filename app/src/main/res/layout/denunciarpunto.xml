@@ -3,7 +3,8 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:background="?android:attr/colorBackgroundCacheHint">
 
     <TextView
         android:id="@+id/txtTituloDenuncia"
@@ -38,6 +39,7 @@
         android:ems="10"
         android:hint="@string/etxtNombrePunto"
         android:inputType="textPersonName"
+        android:textAllCaps="false"
         app:layout_constraintEnd_toEndOf="@+id/txtTituloDenuncia"
         app:layout_constraintHorizontal_bias="0.525"
         app:layout_constraintStart_toStartOf="@+id/txtTituloDenuncia"
