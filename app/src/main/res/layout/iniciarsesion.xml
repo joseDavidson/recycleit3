@@ -57,23 +57,23 @@
         android:id="@+id/ISbtnRegistrarse"
         android:layout_width="225dp"
         android:layout_height="44dp"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="36dp"
         android:text="Registrarse"
         app:layout_constraintEnd_toEndOf="@+id/ISbtnEntrar"
-        app:layout_constraintHorizontal_bias="0.507"
+        app:layout_constraintHorizontal_bias="0.461"
         app:layout_constraintStart_toStartOf="@+id/ISbtnEntrar"
         app:layout_constraintTop_toBottomOf="@+id/ISbtnEntrar" />
 
     <Button
         android:id="@+id/ISbtnEntrarComoInvitado"
-        android:layout_width="225dp"
-        android:layout_height="44dp"
+        android:layout_width="243dp"
+        android:layout_height="50dp"
         android:layout_marginTop="20dp"
         android:layout_marginBottom="20dp"
         android:text="Entrar como invitado"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="@+id/ISbtnRegistrarse"
-        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="@+id/ISbtnRegistrarse"
-        app:layout_constraintTop_toBottomOf="@+id/ISbtnRegistrarse" />
+        app:layout_constraintTop_toBottomOf="@+id/ISbtnRegistrarse"
+        app:layout_constraintVertical_bias="0.495" />
 </androidx.constraintlayout.widget.ConstraintLayout>

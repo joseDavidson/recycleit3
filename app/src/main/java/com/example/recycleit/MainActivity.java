@@ -23,7 +23,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     private AlertDialog dialog;
     private Button btnIniciarSesion,btnAtrasReciclaje,
             btnNewSoli,btnAdelanteReciclaje,btnEntrarSesion,
-            btnRegistrarse,btnEntrarInvitado,btnDenunciarPunto;
+            btnRegistrarse,btnEntrarInvitado,btnDenunciarPunto
+            ,btnRegistrarUsuario;
     private ImageButton btnPorPunto,btnPorRecolector;
 
 
@@ -173,6 +174,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             }
         });
     }
+    //lanzarVistaLayout
     public void lanzarVistaRecolectores() {
         dialogBuilder = new AlertDialog.Builder(this);
         final View contactPopupView = getLayoutInflater().inflate(R.layout.listarecolectores, null);
@@ -206,6 +208,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             @Override
             public void onClick(View v) {
                 dialog.dismiss();
+                lanzarVistaRegistrar();
+                
                 //Lanzar layout de registro
             }
         });
@@ -216,7 +220,27 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             }
         });
     }
+    public void lanzarVistaRegistrar() {
+        dialogBuilder = new AlertDialog.Builder(this);
+        final View contactPopupView = getLayoutInflater().inflate(R.layout.registrarusuario, null);
+        //Codigo layout popup
+        btnRegistrarUsuario = (Button) contactPopupView.findViewById(R.id.btnAddUser);
+        //Codigo layout popup
+        dialogBuilder.setView(contactPopupView);
+        dialog = dialogBuilder.create();
+        dialog.show();
+        //botones
+        btnRegistrarUsuario.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                dialog.dismiss();
+                msn("Registrado");
+            }
 
+        });
+
+    }
+//Metodos
    public void reciclaje(View v){
         Toast.makeText(this, "Reciclaje", Toast.LENGTH_SHORT).show();
         BtnReciclaje();

@@ -39,7 +39,7 @@
     <string name="txtubicacion">Ubicación: . . .</string>
     <string name="txtcorreo">Correo: . . .</string>
     <string name="imgagregar">imgAgregar</string>
-    <string name="etxtnombre">Nombre:</string>
+    <string name="etxtnombre">Nombre Usuario:</string>
     <string name="etxtedad">Edad:</string>
     <string name="etxtnumerocontacto">Numero de contacto:</string>
     <string name="etxtcorreo">Correo:</string>
@@ -57,4 +57,5 @@
     <string name="etxtNombrePunto">Nombre del punto.</string>
     <string name="txtDenunciarPunto">Denuciar Punto</string>
     <string name="DejaTuMensaje">Deja tu mensaje.</string>
+    <string name="txtcreacuenta">Crea una cuenta</string>
 </resources>
