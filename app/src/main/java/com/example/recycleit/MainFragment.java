@@ -76,7 +76,7 @@ public class MainFragment extends Fragment implements OnMapReadyCallback {
 
 
         LatLng restaurantSoju = new LatLng(-33.4381297,-70.6487444);
-        map.addMarker(new MarkerOptions().position(restaurantSoju).title("Centro de reciclaje Plaza de Armas Merced 821 Santiagoaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa").snippet("plástico-carton-vidrio-aluminio").icon(BitmapDescriptorFactory.fromResource(R.drawable.puntoreciclajeextraextrachico)));
+        map.addMarker(new MarkerOptions().position(restaurantSoju).title("Centro de reciclaje Plaza de Armas Merced 821 Santiago").snippet("plástico-carton-vidrio-aluminio"+"hola").icon(BitmapDescriptorFactory.fromResource(R.drawable.puntoreciclajeextraextrachico)));
         LatLng reciclajeReyes = new LatLng(-33.428412526129215,-70.66830728225443);
         map.addMarker(new MarkerOptions().position(reciclajeReyes).title("Punto Limpio Parque de Los Reyes").snippet("Dirección: Santiago, Región Metropolitana").icon(BitmapDescriptorFactory.fromResource(R.drawable.puntoreciclajeextraextrachico)));
         LatLng reciclajeCerrillos = new LatLng(-33.5051505,-70.728599);

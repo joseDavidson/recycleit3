@@ -14,12 +14,14 @@ import android.widget.ImageButton;
 import android.widget.RadioButton;
 import android.widget.Toast;
 
+import java.text.StringCharacterIterator;
+
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
     FragmentTransaction transaction;
     Fragment mainFragment;
     private AlertDialog.Builder dialogBuilder;
     private AlertDialog dialog;
-    private Button btnIniciarSesion,btnAtrasReciclaje,btnReciclajeTipo,btnAdelanteReciclaje,btnEntrarSesion,btnRegistrarse,btnEntrarInvitado;
+    private Button btnIniciarSesion,btnAtrasReciclaje,btnNewSoli,btnAdelanteReciclaje,btnEntrarSesion,btnRegistrarse,btnEntrarInvitado;
     private ImageButton btnPorPunto,btnPorRecolector;
 
 
@@ -46,6 +48,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         }
         if (id == R.id.item2) {
             Toast.makeText(this, "solicitar nuevo punto", Toast.LENGTH_SHORT).show();
+            newPunto();
         }
         if (id == R.id.item3) {
             Toast.makeText(this, "denunciar punto", Toast.LENGTH_SHORT).show();
@@ -72,6 +75,26 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 dialog.dismiss();
                 lanzarVistaInicioSesion();
             }
+        });
+
+    }
+    public void newPunto() {
+        dialogBuilder = new AlertDialog.Builder(this);
+        final View contactPopupView = getLayoutInflater().inflate(R.layout.solicitarnuevopunto, null);
+        //Codigo layout popup
+        btnNewSoli = (Button) contactPopupView.findViewById(R.id.btnNewSoli);
+        //Codigo layout popup
+        dialogBuilder.setView(contactPopupView);
+        dialog = dialogBuilder.create();
+        dialog.show();
+        //botones
+        btnNewSoli.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                dialog.dismiss();
+                msn("Solicitud Enviada :)");
+            }
+
         });
 
     }
@@ -127,8 +150,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 lanzarVistaRecolectores();
             }
         });
-
-
     }
     public void lanzarVistaRecolectores() {
         dialogBuilder = new AlertDialog.Builder(this);
@@ -187,6 +208,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     public void reciclajeSiguiente(View v){
         Toast.makeText(this, "Forma de reciclar", Toast.LENGTH_SHORT).show();
         BtnReciclajeTipo();
+    }
+    public void msn(String msn){
+        Toast.makeText(this, msn, Toast.LENGTH_SHORT).show();
+
     }
 
 }

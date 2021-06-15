@@ -48,4 +48,9 @@
     <string name="btnAddUser">Enviar</string>
     <string name="solicitar_nuevo_punto">Solicitar nuevo punto</string>
     <string name="denunciar_punto">Denunciar punto</string>
+    <string name="reciclaje_electr_nico">Reciclaje Electrónico.</string>
+    <string name="rOrganico">Reciclaje Orgánico.</string>
+    <string name="rVidrio">Reciclaje Vidrio.</string>
+    <string name="rPlastico">Reciclaje Plastico.</string>
+    <string name="rCarton">Reciclaje Cartón</string>
 </resources>
