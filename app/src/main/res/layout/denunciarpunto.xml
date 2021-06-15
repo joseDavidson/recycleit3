@@ -3,7 +3,8 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:background="@color/white">
 
     <TextView
         android:id="@+id/txtTituloDenuncia"
@@ -49,10 +50,10 @@
         android:layout_height="101dp"
         android:layout_marginTop="20dp"
         android:ems="10"
-        android:maxLines="6"
-        android:lines="6"
         android:hint="@string/DejaTuMensaje"
         android:inputType="textMultiLine"
+        android:lines="6"
+        android:maxLines="6"
         app:layout_constraintEnd_toEndOf="@+id/editTextTextPersonName3"
         app:layout_constraintHorizontal_bias="0.428"
         app:layout_constraintStart_toStartOf="@+id/editTextTextPersonName3"
